@@ -4,7 +4,7 @@ var yellowCommunity = {color: "yellow", degreeOne: "Business", degreeTwo: "Const
 var gsuWelcome = "Welcome to GSU!";
 var rruWelcome = "Welcome to RRU! ";
 var yccWelcome = "Welcome to YCC!";
-var genericWelcome = "We are glad you chose our school as your school of choice. While you're probably busy settling into your dorm and meeting your hallmates, we need you to declare your major as soon as possible for our records. You can always change it later on, and we've even taken the liberty of listing our most popular majors here!";
+var genericWelcome = "We are glad you chose our school as your school of choice. We need you to declare your major as soon as possible for our records. You can always change it later on, and we've even taken the liberty of listing our most popular majors here!";
 var decisionNum = 0;
 var buttonClicked = 0;
 
@@ -17,10 +17,10 @@ function linkButtons() {
             schoolChoice(buttonClicked);
          }
          else if(decisionNum == 1) {
-
+            majorChoice(buttonClicked);
          }
          else {
-
+            finalDecision(buttonClicked);
          }
       }
    );
@@ -47,6 +47,30 @@ function schoolChoice(buttonId) {
    }
    decisionNum++;
    $(".B3").remove();
+}
+
+function majorChoice(buttonId) {
+   if (buttonId == "B1") {
+
+   }
+   else if (buttonId == "B2") {
+
+   }
+   else {
+
+   }
+}
+
+function finalDecision(buttonClicked) {
+   if (buttonId == "B1") {
+
+   }
+   else if (buttonId == "B2") {
+
+   }
+   else {
+
+   }
 }
 
 function buildTheStory() {
