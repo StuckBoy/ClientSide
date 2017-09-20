@@ -7,3 +7,7 @@ h1 {
    background-color: lightgray;
    border: 2px solid black;
 }
+
+#div2 {
+  padding: 10px;
+}

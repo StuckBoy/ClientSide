@@ -6,18 +6,20 @@ var rruWelcome = "Welcome to RRU! ";
 var yccWelcome = "Welcome to YCC!";
 var genericWelcome = "We are glad you chose our school as your school of choice. We need you to declare your major as soon as possible for our records. You can always change it later on, and we've even taken the liberty of listing our most popular majors here!";
 var decisionNum = 0;
-var buttonClicked = 0;
+var buttonClicked = "";
+var buttonText = ""
 
 function linkButtons() {
    $("button").click(
       function() {
          buttonClicked = this.id;
-         console.log(buttonClicked);
+         buttonText = $(this).text();
+         console.log(buttonClicked, buttonText);
          if(decisionNum == 0){
             schoolChoice(buttonClicked);
          }
          else if(decisionNum == 1) {
-            majorChoice(buttonClicked);
+            majorChoice(buttonClicked, buttonText);
          }
          else {
             finalDecision(buttonClicked);
@@ -49,9 +51,11 @@ function schoolChoice(buttonId) {
    $(".B3").remove();
 }
 
-function majorChoice(buttonId) {
+function majorChoice(buttonId, buttonText) {
    if (buttonId == "B1") {
-
+     console.log("img/" + buttonText + ".jpg")
+     var urlString = 'img/' + buttonText + '.jpg';
+     document.getElementById('div2').innerHTML = '<img src = ' + urlString + ' width="350" height="300"/>';
    }
    else if (buttonId == "B2") {
 
